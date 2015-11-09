@@ -1,0 +1,83 @@
+
+
+.zForm{
+
+	.zNice-checkbox,.zNice-radio{
+		margin-right:9px;
+		& + .zForm-text{
+			color:$baseColor;
+			@extend %inline-middle;
+		}
+	}
+	&-title{
+		font-size: $titleSize;
+		margin-bottom: 10px;
+	}
+	&-subtitle{
+		margin-bottom: 1em;
+	}
+	&-row{
+		margin-bottom:9px;
+		&:after{
+			@extend %cfix;
+		}
+		
+		&.leftFormat{
+			.zForm-col{
+				&:nth-child(1){
+					width:74%;
+					margin-right:2%
+				}
+				&:nth-child(2){
+					width:24%;
+				}
+			}
+		}
+		&.rightFormat{
+			.zForm-col{
+				&:nth-child(1){
+					width:24%;
+					margin-right:2%
+				}
+				&:nth-child(2){
+					width:74%;
+				}
+			}
+		}
+	}
+	&-col{
+		width:49%;
+		margin-right:2%;
+		float:left;
+		&:last-child{
+			margin-right:0;
+		}
+	}
+	&-center{
+		text-align:center;
+	}
+	&-link {
+		@extend %inline-middle;
+	}
+	&-text{
+		@extend %inline-middle;
+		color:$ctextColor;
+		text-decoration:none;
+	}
+	.zForm-inline {
+		@extend %inline-middle;
+		margin-right: 8px;
+	}
+	&-label {
+		display: block;
+		margin-bottom: 10px;
+	}
+	label{
+		display: block;
+	}
+	&-text, &-label {
+		color: #242424;
+		text-decoration: none;
+		font-size: 14px;
+	}
+}

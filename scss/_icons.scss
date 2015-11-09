@@ -1,0 +1,76 @@
+@mixin icons($background, $width, $height) {
+	background: url('../images/#{$background}.png') no-repeat left top;
+	width: $width; 
+	height: $height;
+}
+
+@mixin arrow($color, $direction:left, $width:7px, $weight: 3px, $angle: 45deg ) { // ie 10+
+	width:$width;
+	height:$width;
+	line-height:$width;
+	border-top:$weight solid $color;
+	border-right:$weight solid $color;
+
+	@if $direction == 'right' {
+		$angle : 45deg;
+	} 
+	@else if $direction == 'left' {
+			$angle : -135deg;
+		}	
+			@else if $direction == 'up' {
+				$angle : -45deg;
+			}
+				@else if $direction == 'down' {
+					$angle : 135deg;
+				}
+
+	-ms-transform:rotate($angle);
+	-moz-transform:rotate($angle);
+	-webkit-transform:rotate($angle);
+	-o-transform:rotate($angle);
+	transform:rotate($angle);
+}
+
+.icon {
+	@extend %inline-middle;
+	
+	&_bigLarr { @include arrow(#000,left,22px,3px); }  // in the css file is compiled - 
+														// .icon_bigLarr {   
+														// 	width: 22px;
+														// 	height: 22px;
+														// 	line-height: 22px;
+														// 	border-top: 3px solid red;
+														// 	border-right: 3px solid red;
+														// 	-ms-transform: rotate(-135deg);
+														// 	-webkit-transform: rotate(-135deg);
+														// 	transform: rotate(-135deg); 
+														// 
+													//}
+
+	&_bigRarr { @include arrow(#f00,right,22px,3px); }
+	
+	&_litUparr { @include icons(icon_lituparr, 7px, 10px); } 	// in the css file is compiled - 
+																// .icon_litUparr {   
+																	// background: url("../images/icon_lituparr.png") no-repeat left top;
+																	// width: 7px;
+																	// height: 10px;
+																//}
+
+}
+
+
+// @mixin socIcon($bg){
+// 	background-position: $bg;
+// }
+
+// .social-icon {
+// 	background-image: url('../images/social-icon.png');
+// 	background-repeat: no-repeat;
+	
+// 	&_fb {
+// 		@include socIcon(0 0);
+// 	}
+// 	&_vk {
+// 		@include socIcon(-15px 0);
+// 	}
+// }

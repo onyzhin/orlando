@@ -1,0 +1,29 @@
+/*examples*/
+
+/* ETO STILI DLYA PRIMEROV, VSE CLASSI ispolzuutsa v ka4estve primerov i mogut(dolzhnu) but udaleni ili zameneni.
+stili s !!! - obyazatelni dlya raboti.*/
+
+.h_logo {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+/*zTabs*/
+.zTabs-buttons a {
+	cursor: pointer;
+	float: left;
+}
+.zTabs-buttons a.active {
+	background: #121CCD;/*Stili activnoy knopki*/
+}
+.zTabs-window {
+	border: 1px solid red;
+}
+.zTabs-window .active {
+	display: block;
+}
+
+/*Stili aktivnogo bloka*/
+.zTabs-window .hidden {
+	display: none;
+}

@@ -1,0 +1,48 @@
+
+/* helping adds*/
+.clear {
+	clear: both;
+	font-size: 1px;
+	line-height: 1px;
+	height: 0;
+	overflow: hidden;
+}
+.juster {
+	display: inline-block;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+}
+.vfix {
+	height: 100%;
+	width: 0px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.zHiddenBlock {
+	position: absolute;
+	left: -99999em;
+	top: -99999em;
+}
+
+/* /helping adds*/
+
+
+/* base styles*/
+html {
+	height: 100%
+}
+body {
+	min-height: 100%;
+	min-width: $body-minWidth;
+	font-family: arial, sans-serif;
+	font-size: $body_font_size;
+	background: $body_background;
+	color: #000;
+	position: relative;
+}
+img {
+	vertical-align: bottom;
+	border: 0;
+	max-width: 100%;
+}

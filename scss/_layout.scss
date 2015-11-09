@@ -1,0 +1,71 @@
+
+body *{
+	-moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+.mbox {
+	width: $body-minWidth;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+.mbox:after, .zForm-row:after, .zTabs-buttons:after {
+	@extend %cfix;
+}
+
+/* header layout */
+.header {
+	position: relative;
+	z-index: 2;
+
+	.hlogo{
+
+	}
+
+	&-top {
+
+		&-left {
+			
+		}
+		&-center {
+			
+		}
+		&-right {
+			
+		}
+	}
+	&-bottom {
+		
+	}
+}
+
+.main {
+	.sidebar_w {
+		width: 180px;
+		float: left;
+	}
+	.sidebar {
+		margin: 0;
+	}
+	.content_w {
+		float: left;
+		width: 780px;
+	}
+	.content {
+		margin: 0;
+	}
+}
+
+.footer {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	z-index:2;
+	overflow:hidden;
+	&_placeholder{
+		height: 200px;
+	}
+}
+

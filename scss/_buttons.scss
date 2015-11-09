@@ -1,0 +1,87 @@
+/*buttons*/
+.button {
+	min-width: 100px;
+	padding: 0 4px;
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	position: relative;
+	text-decoration: none;
+	height: 28px;
+	line-height: 28px;
+	color: #fff !important;
+	font-size: 12px;
+	text-align: center;
+	background: #6d9aea;
+	border: 0px solid #c10e0e;
+
+	&:hover{
+		background: #6d0aea;
+	}
+	input {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		border: 0;
+		background: url('../images/spacer.gif');
+		cursor: pointer;
+	}
+}
+.zNiceInputWrapper.fileupload {
+	padding: 0 10px 0 130px;
+	display: block;
+	position: relative;
+	background: #fff;
+	border: 1px solid #ccc;
+
+	.zNiceInputBg {
+		height: 28px;
+		line-height: 28px;
+		display: block;
+		font-size: 12px;
+		text-align: left;
+		white-space: nowrap;
+		overflow: hidden;
+		color: #999999;
+		background: transparent;
+		position: relative;
+		z-index: 1;
+	}
+
+	.zNiceInputLeft {
+		color: #3d3d3d;
+	}
+
+
+	.ubutton {
+		min-width: 111px;
+		height: 26px;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		line-height: 26px;
+		-webkit-box-shadow: 1px 1px 1px 1px rgba(9, 49, 60, 0.5);
+		box-shadow: 1px 1px 1px 1px rgba(9, 49, 60, 0.5);
+		color: #fff;
+		font-size: 14px;
+		text-align: center;
+		background: #6d9aea;
+		border: 0px solid #c10e0e;
+		cursor: pointer;
+		z-index: 2;
+
+		&:hover {
+			background: #107999; 
+		}
+	}
+
+	input {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+}
