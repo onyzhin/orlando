@@ -1,2 +1,2 @@
-	<div class="mbox container">
+	<div class="container">
 	</div>

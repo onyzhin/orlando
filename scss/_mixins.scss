@@ -97,6 +97,7 @@
 	&:hover {color: $baseColor_hover; text-decoration: none;}
 }
 
+%clear:after,
 %cfix:after {
 	content: '';
 	clear:both;

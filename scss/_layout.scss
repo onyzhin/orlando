@@ -12,7 +12,7 @@ body *{
 }
 .mbox:after, .zForm-row:after, .zTabs-buttons:after {
 	@extend %cfix;
-}
+} 
 
 /* header layout */
 .header {
