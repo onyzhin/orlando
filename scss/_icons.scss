@@ -34,43 +34,18 @@
 .icon {
 	@extend %inline-middle;
 	
-	&_bigLarr { @include arrow(#000,left,22px,3px); }  // in the css file is compiled - 
-														// .icon_bigLarr {   
-														// 	width: 22px;
-														// 	height: 22px;
-														// 	line-height: 22px;
-														// 	border-top: 3px solid red;
-														// 	border-right: 3px solid red;
-														// 	-ms-transform: rotate(-135deg);
-														// 	-webkit-transform: rotate(-135deg);
-														// 	transform: rotate(-135deg); 
-														// 
-													//}
-
-	&_bigRarr { @include arrow(#f00,right,22px,3px); }
-	
-	&_litUparr { @include icons(icon_lituparr, 7px, 10px); } 	// in the css file is compiled - 
-																// .icon_litUparr {   
-																	// background: url("../images/icon_lituparr.png") no-repeat left top;
-																	// width: 7px;
-																	// height: 10px;
-																//}
+	&-contacts{
+		background-image: url(../images/icon-contacts.png);
+		width: 24px; 
+		height: 24px;
+		&-email{
+			background-position: left bottom;
+		}
+		&-phone{
+			background-position: left top;
+		}
+	}
 
 }
 
 
-// @mixin socIcon($bg){
-// 	background-position: $bg;
-// }
-
-// .social-icon {
-// 	background-image: url('../images/social-icon.png');
-// 	background-repeat: no-repeat;
-	
-// 	&_fb {
-// 		@include socIcon(0 0);
-// 	}
-// 	&_vk {
-// 		@include socIcon(-15px 0);
-// 	}
-// }

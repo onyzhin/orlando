@@ -78,9 +78,10 @@
 	position: absolute;
 	left: 0px;
 	top: 100%;
+	margin: 0;
+	margin-top: -2px;
 	list-style: none;
 	display: none;
-	margin: 0;
 	overflow-y: auto;
 	min-width: 100%;
 	white-space: nowrap;
@@ -105,16 +106,16 @@
  * placeholder
  * ------------- */
 ::-webkit-input-placeholder {
-	color: #212121;
+	color: #a0a0a0;
 }
 :-moz-placeholder {
-	color: #212121;
+	color: #a0a0a0;
 }
 ::-moz-placeholder {
-	color: #212121;
+	color: #a0a0a0;
 }
 :-ms-input-placeholder {
-	color: #212121;
+	color: #a0a0a0;
 }
 
 /* END zNice base styles DONT TOUCH IF YOU DONT KNOW WHAT IS THIS!!!!!*/
@@ -217,37 +218,57 @@
 /*Default Select*/
 .zNice-select {
 	display: block;
-	height: 28px;
-	line-height: 28px;
+	height: 31px;
+	line-height: 31px;
 	font-size: 12px;
 }
 .zNice-select .zNice-bg {
-	background: #fff;
-	border: 1px solid #ccc;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(255, 224, 0);
+	border-radius: 5px;
+	background-color: rgb(255, 255, 255);
+}
+.zNice-expanded.zNice-select .zNice-bg{
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
 }
 .zNice-select-text {
 	overflow: hidden;
 	position: relative;
+	color: #000;
+	font-size: 15px;
 }
 .zNice-select-open {
-	right: 4px;
-	top: 4px;
-	width: 20px;
-	height: 20px;
-	background: url('../images/zNice-select-open.png') no-repeat left top;
+	right: 3px;
+	top: 3px;
+	border-radius: 5px;
+	background-image: -moz-linear-gradient( 90deg, rgb(255,192,0) 0%, rgb(255,224,0) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(255,192,0) 0%, rgb(255,224,0) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(255,192,0) 0%, rgb(255,224,0) 100%);
+	width: 25px;
+	height: 25px;
+	text-align:center;
+	line-height: 27px;
 }
-.zNice-select:hover .zNice-select-open, .zNice-expanded .zNice-select-open {
-	background-position: right bottom;
+
+.zNice-select-open:after{
+	content: url('../images/select-open.png');
+}
+
+.zNice-select:hover .zNice-select-open, .zNice-expanded .zNice-select-open { 
+background:#ffc100;
 }
 .zNice-select-list {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 2px solid #FFE001;
 	background-color: #fff;
+	color: #000;
 	max-height: 172px;
 }
 .zNice-select-list li {
-	border-width: 0 1px 1px;
+	border-width: 0 2px 0px;
 	border-style: solid;
-	border-color: #ccc;
+	border-color: #FFE001;
 }
 .zNice-select-list li:last-child {
 	border-bottom: 0;
@@ -257,7 +278,7 @@
 	color: #fff;
 }
 .zNice-select-list li .zNice-select-item {
-	margin: 0 -1px;
+	margin: 0px 0px;
 }
 .zNice-select-item, .multipleText {
 	padding: 0 25px 0 10px;

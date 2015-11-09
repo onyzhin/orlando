@@ -1,0 +1,118 @@
+.header {
+	position: relative;
+	z-index: 2;
+	min-height: 150px;
+	color: #fff;
+	@include vertical-gradient(#e20000,#b50808);	
+	&-row{
+		@extend %row;		
+	}
+	&-logo{
+		@extend %col3Item;
+		padding-top: 21px;
+		a{
+			color:#fff;
+			text-decoration: none;
+		}
+		img{
+			float: left;
+		}
+		&-title{
+			font-size: 22px;
+			font-family: 'Arial Black';
+			font-weight: bold;
+			text-transform: uppercase;    
+			line-height: 34px;
+    		margin-left: 120px;
+		}
+		&-subtitle{
+		 	font-size: 22px;
+			text-transform: uppercase;		
+		    line-height: 25px;
+		    margin-left: 120px;
+		    letter-spacing: -0.7px;
+			 em{
+			 	font-size: 27px;
+			 	line-height: 26px
+			 }
+		}
+	}
+	&-description{
+		@extend %col3Item;
+	   padding-top: 42px;
+		p{
+			font-size: 15px; 
+    		line-height: 19px;
+		}
+	}
+	&-contacts{
+		@extend %col3Item;
+		padding-top: 13px;
+
+		&-inner{
+			padding-left: 22px;
+		}
+		&-title{
+			font-size: 20px;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-bottom: 7px;
+		}
+		&-item{
+			font-size: 18px;
+			margin-bottom: 2px;
+			em{
+				font-size: 36px;
+				font-weight: bold;
+				color:#ffea00;
+			}
+			&.email{
+				em{
+					font-size: 21px;
+				}
+			}
+			.icon{
+			    margin-right: 8px;
+			}
+		}
+		&-select{
+			p{
+				margin-right: 12px;
+				letter-spacing: -0.8px;
+				@extend %inline-middle;
+			}
+			.zNice-select{
+				width: 185px;
+				@extend %inline-middle;
+			}
+		}
+	}
+	&-menu{
+		ul{
+			display: table;
+			width: 100%;
+			height: 45px;
+			line-height: 45px;
+			li{
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				a{
+					text-decoration: none;
+				  font-size: 13px;
+				  color: rgb(66, 84, 99);
+				  font-weight: bold;
+				  text-transform: uppercase;
+				  line-height: 1.2;
+
+				}
+				&:first-child{
+					text-align: left;
+				}
+				&:last-child{
+					text-align: right;
+				}
+			}
+		}
+	}
+}

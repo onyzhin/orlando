@@ -1,0 +1,107 @@
+.firstScreen{
+	position: relative;
+	min-height: 429px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&-left{
+		float: left;
+		width: 65%;
+		padding-top: 23px;
+	}
+	&-right{
+		width: 34%;
+		float: right;
+		padding-top: 23px;
+	}
+	&-title{
+  		background-color: rgba(255, 255, 255, 0.8);
+  		max-width: 580px;
+	    padding: 15px 20px 16px 20px;
+	    margin-bottom: 16px;
+		h2{
+			font-size: 36px;
+			font-family: 'Arial Black';
+			text-transform: uppercase;
+			color:#425463;
+			line-height: 37px;
+   			margin-bottom: 6px;
+		}
+		h3{
+			font-size: 25px;
+			color:#425463;
+			margin-bottom: 0;
+		}
+	}
+	&-quote{
+		width: 401px;
+		height: 277px;
+		background: url(../images/firstscreen-quote.png);
+		float: right;
+	    padding: 68px 80px 10px 108px;
+   		text-align: center;
+		h3{
+			font-size: 40px;
+			color:#425463;
+			font-family: 'Arial Black';
+			text-transform: uppercase;
+			margin-bottom: 13px;
+		}
+		h4{
+			font-size: 16px;
+			font-weight: bold;
+			color:#425463;
+			margin-bottom: 1px;
+		}
+		p{
+			font-size: 13px;
+			font-weight: bold;
+			color:#425463;
+			margin-bottom: 17px;
+		}
+		&-price{
+			color: #b80808;
+			font-size: 14px;
+			font-weight: bold;
+		    padding-left: 45px;
+			em{
+				font-family: 'Arial Black';
+				font-size: 40px;
+				margin-right: 6px;
+			}
+		}
+	} 
+	&-form{
+		border-style: solid;
+		border-width: 5px;
+		border-color: rgb(255, 192, 0);
+		border-radius: 10px;
+		background: #fff;
+		width: 100%;
+		margin-top: -5px;
+	    padding: 26px 14px 10px 14px;
+
+		&-title{
+			color:#425463;
+			font-family: 'Arial Black';
+			font-size: 23px;
+			text-transform: uppercase;	
+			text-align: center;
+			margin-bottom: 13px;	
+		}
+		&-subtitle{
+			color:#425463;
+			font-weight: bold;
+			font-size: 15px;
+			text-align: center;
+			line-height: 18px;
+			padding: 0 5px;	
+		}
+		&-confidential{
+			span{
+				font-size: 12px;
+			}
+		}
+	}
+}

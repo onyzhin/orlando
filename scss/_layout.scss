@@ -4,41 +4,17 @@ body *{
     box-sizing: border-box;
 }
 
-.mbox {
-	width: $body-minWidth;
+.container {
+	padding:0 10px;
 	margin: 0 auto;
 	position: relative;
 	z-index: 1;
+	@extend %clear; 
 }
-.mbox:after, .zForm-row:after, .zTabs-buttons:after {
-	@extend %cfix;
+
+.zForm-row:after, .zTabs-buttons:after {
+	@extend %cfix; 
 } 
-
-/* header layout */
-.header {
-	position: relative;
-	z-index: 2;
-
-	.hlogo{
-
-	}
-
-	&-top {
-
-		&-left {
-			
-		}
-		&-center {
-			
-		}
-		&-right {
-			
-		}
-	}
-	&-bottom {
-		
-	}
-}
 
 .main {
 	.sidebar_w {
@@ -67,5 +43,17 @@ body *{
 	&_placeholder{
 		height: 200px;
 	}
+}
+
+%row{
+	margin-left: -10px;
+	margin-right: -10px;
+}
+%col3Item{
+	float: left;
+	width: 33.333%;
+	padding-left: 10px;
+	padding-right: 10px;
+	@extend %clear; 
 }
 

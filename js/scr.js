@@ -80,9 +80,26 @@ function expandTool(){
 	})
 }
 
+function navbartoggle(){
+	$('.navbar-toggle').click(function(){
+		var navbar = $('.navbar-collapse');
+		if($(this).is('.active')){
+			$(this).removeClass('active');
+			navbar.stop().slideUp().removeClass('active');
+		}
+		else{
+			$(this).addClass('active');
+			navbar.stop().slideDown().addClass('active');
+		}
+		return false;
+	});
+}
+
 
 $(document).ready(function(){
 	modernize();
-	zTabs();
+	navbartoggle();
 	$('.footer_placeholder').height($('.footer').outerHeight());
+
+	 $("input[name='phone']").mask("+7 (999) 999-99-99");
 });
