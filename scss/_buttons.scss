@@ -21,12 +21,20 @@
 	border-width: 1px;
 	border-color: rgb(255, 180, 0);
 	border-radius: 26px;
-	box-shadow: inset 0px 1px 0px 0px rgba(255, 226, 139, 0.4);  
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 226, 139, 0.4);
+	overflow: hidden;
 	@include vertical-gradient(#ffc000,#ff9700);
 
 	&.block{
 		display: block;
 		margin: 0 auto;
+	}
+	&.btn-large{
+		height: 98px;
+		line-height: 96px;
+		font-size: 30px;
+		border-radius: 50px;
+		max-width: 460px;
 	}
 	&:hover{
 		background: #ff9700;

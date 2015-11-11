@@ -1,4 +1,4 @@
-@function pxtopercent($target, $parent: 16) {
+@function pxtopercent($target, $parent: 940px) {
   @return percentage($target / $parent);
 } 
 
@@ -106,6 +106,12 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
 }
 
+@mixin background($image){
+	background-image: url(../images/#{$image});
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 %defaultMargin {
 	margin-bottom: 50px;

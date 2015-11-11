@@ -4,3 +4,8 @@
 <? partial('windowsScreen'); ?>
 <? partial('portfolio'); ?> 
 <? partial('gate'); ?> 
+<? partial('payment'); ?> 
+<? partial('phase'); ?> 
+<? partial('delivery'); ?> 
+<? partial('scheme'); ?> 
+<? partial('projects'); ?> 

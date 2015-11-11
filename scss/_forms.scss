@@ -8,6 +8,12 @@
 	margin-top: -5px;
     padding: 26px 14px 15px 14px;
 
+	&.mform-book{
+		
+		.mform-title{
+			font-size: 21px;
+		}
+	}
 	&-field{
 		margin-bottom: 14px;
 	}
@@ -32,6 +38,8 @@
 		border-top: 1px solid #ffd794;
 		padding-top: 16px;
 		color: #3d3d3d;
+		min-height: 58px;
+		
 		.icon{
 			float: left;
 		}

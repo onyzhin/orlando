@@ -1,10 +1,9 @@
 .gate{
 	min-height: 490px;
-	background: url(../images/pattern-6.png) center center no-repeat;
-	background-size: cover;
+	@include background('pattern-6.png');  
 
 	&-info{
-		width: pxtopercent(362px, 960px);
+		width: pxtopercent(362px);
 		float: left;
 		padding-top: 80px;
 
@@ -24,7 +23,7 @@
 			margin-bottom: 44px;
 			
 			&-inner{
-				
+
 			}
 			&:after{
 				content: url(../images/hour-arrow.png);
@@ -39,7 +38,7 @@
 		}
 	}
 	&-image{
-		width: pxtopercent(578px, 960px);
+		width: pxtopercent(578px);
 		float: left;
 	    padding-top: 49px;
 	}

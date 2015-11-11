@@ -1,0 +1,123 @@
+.phase{
+	padding: 59px 0 65px 0;
+	background: url(../images/pattern-1.png);
+
+	&-list{
+		@extend %clear;
+		&.row2Item{
+			padding: 0 pxtopercent(156px);
+			margin-bottom: 64px;
+			.phase-item{
+				@extend %col2Item;
+			}
+		}
+	}
+	&-item{
+		text-align: center;
+		@extend %col;
+		@extend %col3Item;
+		margin-bottom: 33px; 
+
+		&-image{
+			width: 117px;
+			height: 139px;
+			margin: 0 auto;
+			position: relative;
+			@include background('phase-circle.png');
+			margin-bottom: 16px; 
+			position: relative;
+
+			img{
+				@extend %inline-middle;
+			}  
+			&:after{
+				content:url(../images/phase-arrow.png); 
+				position: absolute;
+				top: calc(50% - -1px);
+				left: calc(100% + 12px);
+			}
+		}
+		&.item-4{
+			.phase-item-image:before{ 
+				position: absolute;
+				bottom: calc(100% - 87px);
+				left: -89px;
+				content:url(../images/phase-arrow-big.png); 
+				z-index: -1;
+			}			
+		}
+		&.item-3, 
+		&.item-5{
+			.phase-item-image:after{ 
+				content: none;
+			}
+		}
+		&-title{
+			font-size: 20px;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-bottom: 2px;
+		}
+		&-subtitle{
+			font-size: 14px; 
+			line-height: 17px;
+    		padding: 0 10px;
+    		max-height: 85px;
+    		overflow: hidden;
+		}
+		&-step{
+			font-size: 50px;
+			font-weight: bold;
+			position: absolute;
+		    top: 48px;
+			left: -13px;
+		}
+	}
+} 
+
+.videoFrame{
+	border-style: solid;
+	border-width: 5px;
+	border-color: rgb(255, 210, 0);
+	background-color: rgb(247, 245, 242);
+	box-shadow: 2.5px 4.33px 5px 0px rgba(190, 181, 164, 0.4);
+	padding: 0 25px 10px 25px;
+
+	&-row{
+		@extend %row;
+	}
+	&-col{
+		@extend %col;
+		@extend %col2Item;
+	}
+	&-title{
+		height: 63px;
+		max-width: 370px;
+		@include background('videoframe-bg.png');
+		border-style: solid;
+		border-width: 5px;
+		border-color: rgb(255, 210, 0);
+		margin-top: -37px;
+    	margin-bottom: 21px;
+		
+		&-inner{
+			display: table;
+			width: 100%;
+			height: 100%;
+		}
+		span{
+			font-size: 14px;
+			font-weight: bold;
+			text-transform: uppercase;
+			display: table-cell;
+			vertical-align: middle;
+			padding: 0 10px 0 8px;
+		}
+	}
+	&-media{
+		iframe{
+			max-width: 100%;
+			height: 242px;
+		}
+	}
+}

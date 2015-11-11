@@ -53,6 +53,14 @@
 	?>
 	<header class="header">
 		<div class="container">
+			<div class="navbar-toggle">
+				<span class="icon-container">
+					<span class="line line01"></span>
+					<span class="line line02"></span>
+					<span class="line line03"></span>
+					<span class="line line04"></span>
+				</span>
+			</div>
 			<div class="header-row">
 				<div class="header-logo">
 					<a href="/">
@@ -93,14 +101,6 @@
 	</header>
 	<div class="header-menu">
 		<div class="container">
-			<div class="navbar-toggle">
-				<span class="icon-container">
-					<span class="line line01"></span>
-					<span class="line line02"></span>
-					<span class="line line03"></span>
-					<span class="line line04"></span>
-				</span>
-			</div>
 			<nav class="navbar topMenu" role="navigation">
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">

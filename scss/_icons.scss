@@ -46,6 +46,31 @@
 			width: 27px;
 		}
 	}
+	&-payment{
+		background-image: url(../images/icon-payment.png);
+		width: 16px; 
+
+		&-prepayment{
+			height: 20px;
+			background-position: 0 0;
+		}
+		&-project{
+			height: 20px;
+			background-position: 0 -30px;
+		}
+		&-cash{
+			height: 16px;
+			background-position: 0 -59px;
+		}
+		&-diagram{
+			height: 15px;
+			background-position: 0 -84px;
+		}
+		&-renting{
+			height: 16px;
+			background-position: 0 -114px;
+		}
+	}
 	&-shield{
 		width: 34px;
 		height: 42px;

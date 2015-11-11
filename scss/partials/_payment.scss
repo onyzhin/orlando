@@ -1,0 +1,83 @@
+.payment{
+	min-height: 487px;  
+	padding: 50px 0 0 0;
+	@include radial-gradient(#d03738, #880102);
+	position: relative;
+	overflow: hidden;
+	@extend %clear;
+	
+	&:after{
+		content:'';
+		@include background('pattern-7.png');   
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+	.mainheading{
+		color: #fff;
+		margin-bottom: 20px;
+	}
+	&-image{
+		width: pxtopercent(372px);
+		float: left;
+		margin-left: pxtopercent(-115px)
+	}
+	&-info{
+		width: pxtopercent(400px);
+		padding-left: pxtopercent(15px);
+		float: left;
+		color: #fff;
+
+		&-title{
+			font-size: 22px;
+			font-family: "Arial Black";
+			text-transform: uppercase;
+			margin-bottom: 4px;
+		}
+		&-subtitle{
+			font-size: 20px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #ffd200;
+			margin-bottom: 12px;
+		}
+	}
+	&-form{
+		width: pxtopercent(282px);
+		float: left;
+		.mform{
+		    margin-top: -47px;
+		}
+		.mform-title{
+			font-size: 21px;
+		}
+	}
+	&-list{
+		border-top: 1px solid #d5686a;
+		padding-top: 28px;
+		padding-bottom: 7px;
+		max-width: 348px;
+	}
+	&-title{
+		font-size: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 12px;
+	}
+	&-item{	
+		font-size: 17px;    
+		line-height: 20px;
+    	margin-bottom: 9px;;
+
+		.icon{
+		    float: left;
+		}	
+		span{
+		    margin-left: 28px;
+    		display: block;
+		}
+	}
+}

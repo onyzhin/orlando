@@ -1,0 +1,80 @@
+@mixin keyframe ($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
+        @content;
+    } 
+
+    @-moz-keyframes #{$animation_name} {
+        @content;
+    }
+ 
+    @-o-keyframes #{$animation_name} {
+        @content;
+    }
+
+    @keyframes #{$animation_name} {
+        @content;
+    }
+}
+
+@mixin animation ($delay, $duration, $animation, $once, $ease) { 
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration; 
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; 
+    -webkit-animation-iteration-count: $once;
+    -webkit-animation-timing-function: $ease;
+
+    -moz-animation-delay: $delay; 
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-iteration-count: $once;
+    -moz-animation-timing-function: $ease;
+
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; 
+    -o-animation-iteration-count: $once;
+    -o-animation-timing-function: $ease;
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; 
+    animation-iteration-count: $once;
+    animation-timing-function: $ease; 
+}
+
+@mixin translateX($x){
+    -webkit-transform: translateX($x);
+    -moz-transform: translateX($x);
+    -o-transform: translateX($x);
+    transform: translateX($x);
+}
+@mixin translateY($y){
+    -webkit-transform: translateY($y);
+    -moz-transform: translateY($y);
+    -o-transform: translateY($y);
+    transform: translateY($y);
+}
+
+@mixin translateXY($x, $y){
+    -webkit-transform: translateY($y) translateX($x);
+    -moz-transform: translateY($y) translateX($x);
+    -o-transform: translateY($y) translateX($x);
+    transform: translateY($y) translateX($x);
+}
+
+@include keyframe(trackPoint) {
+    0% {
+        @include translateXY(0,0);
+    }
+    50% {
+        @include translateXY(12px, -6px);
+    }
+    100% {
+        @include translateXY(0,0);
+    }
+}
+    
