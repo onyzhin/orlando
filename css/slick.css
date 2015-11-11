@@ -115,3 +115,44 @@
 
     border: 1px solid transparent;
 }
+
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 21px;
+    height: 36px;
+    margin-top: -18px;
+    padding: 0;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-image: url(../images/slider-arrows.png);
+    background-repeat: no-repeat;
+}
+.slick-prev{
+    background-position: left top;  
+    left: 0;  
+}
+.slick-next{    
+    background-position: right top;
+    right: 0;  
+}
+.slick-prev:hover{
+    background-position: left bottom;
+}
+.slick-next:hover{
+    background-position: right bottom;
+}

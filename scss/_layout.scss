@@ -48,12 +48,28 @@ body *{
 %row{
 	margin-left: -10px;
 	margin-right: -10px;
+	@extend %clear; 
 }
-%col3Item{
+%col{
 	float: left;
-	width: 33.333%;
 	padding-left: 10px;
 	padding-right: 10px;
-	@extend %clear; 
+	@extend %clear; 	
+}
+%col3Item{
+	@extend %col;
+	width: 33.333%;
+} 
+%col2Item{
+	@extend %col;
+	width: 50%;
+} 
+%col4Item{
+	@extend %col;
+	width: 25%; 
+}
+%col5Item{
+	@extend %col;
+	width: 20%; 
 }
 

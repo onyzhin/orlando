@@ -1,0 +1,55 @@
+.catalog{    
+	padding: 45px 0 25px 0;
+	background: url(../images/pattern-1.png);
+
+	.mainheading{
+		margin-bottom: 30px;
+	}
+	&-title{
+		font-size: 18px; 
+		margin-bottom: 23px;
+		color:#3d3d3d;
+	}
+	&-list{
+		@extend %row;	
+		padding: 0 21px; 
+		margin-bottom: 30px;	
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&-item{
+		@extend %col4Item;
+		text-align: center;
+
+		&-inner{
+			width: 160px;
+			margin: 0 auto;
+		}
+		&-title{
+			height: 32px;
+			line-height: 32px;
+			background: #ffc000;
+			font-size: 18px;
+			font-weight: bold;
+			color:#3d3d3d;
+			text-align: center;
+			margin-bottom: 14px;
+		}
+		&-image{
+			margin-bottom: 11px;
+			img{
+				border: 3px solid #999999;
+			}
+		}
+		&-price{
+			font-size: 24px;
+			font-weight: bold;
+			color:#c60202;
+		}
+		&-detail{
+			font-weight: bold;
+			line-height: 20px;
+		}
+	}
+}

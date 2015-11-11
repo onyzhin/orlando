@@ -35,21 +35,34 @@ function inputNumber(block) {
 	});
 }
 function slickInit(){
-	$('.slider-for').slick({
-	  slidesToShow: 1,
+	$('.catalog-list').slick({
+	  slidesToShow: 4,
 	  slidesToScroll: 1,
 	  arrows: true,
-	  fade: true,
-	  asNavFor: '.slider-nav'
-	});
-	$('.slider-nav').slick({
-	  slidesToShow: 3,
-	  slidesToScroll: 1,
-	  asNavFor: '.slider-for',
-	  dots: false,
-	  centerMode: true,
-	  centerPadding:'0px',
-	  focusOnSelect: true
+	  fade: false,
+	  responsive: [
+	  	{
+	      breakpoint: 960,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 1
+	      }
+	    },
+	  	{
+	      breakpoint: 768,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 1
+	      }
+	    },
+	  	{
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    },
+	  ]
 	});
 }
 
@@ -99,6 +112,8 @@ function navbartoggle(){
 $(document).ready(function(){
 	modernize();
 	navbartoggle();
+	slickInit();
+	galleryLink();
 	$('.footer_placeholder').height($('.footer').outerHeight());
 
 	 $("input[name='phone']").mask("+7 (999) 999-99-99");

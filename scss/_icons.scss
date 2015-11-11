@@ -43,7 +43,18 @@
 		}
 		&-phone{
 			background-position: left top;
+			width: 27px;
 		}
+	}
+	&-shield{
+		width: 34px;
+		height: 42px;
+		background:url(../images/icon-shield.png);
+	}
+	&-zoom{
+		width: 26px;
+		height: 26px;
+		background:url(../images/icon-zoom.png);
 	}
 
 }

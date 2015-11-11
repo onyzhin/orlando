@@ -15,10 +15,14 @@
 	<script src="znice/jquery.znice.validate.js" type="text/javascript"></script>
 	<script src="znice/jquery.znice.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" media="all" />
+	<script src="js/slick.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/slick.css" media="all" />
 	<script src="fancybox/jquery.fancybox.js" type="text/javascript"></script>
 	<script src="js/modernizr.js" type="text/javascript"></script>
 	<script src="js/jquery.watermark.min.js" type="text/javascript"></script>
 	<script src="js/jquery.maskedinput.js" type="text/javascript"></script>
+	<script src="js/jquery.plugin.js" type="text/javascript"></script>
+	<script src="js/jquery.countdown.js" type="text/javascript"></script>
 	<!-- remove Files -->
 	<script src="develop/autocssrenew.js" type="text/javascript"></script>
 	<!-- remove Files -->	

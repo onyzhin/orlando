@@ -4,14 +4,21 @@
 a{
 	@extend %link;
 	border:0;
-
-	&:hover{color:$baseColor_hover;text-decoration: none;}
+	color:$baseColor;
+	
+	&:hover{color:$baseColor;text-decoration: none;}
 }
 
 .mainheading,.ctext h1,h1{
 	@extend %heading;
-	font-size: px(28);
-	margin-bottom: 25px;
+	font-size: px(26);
+	font-family: "Arial Black";
+    margin-bottom: 44px;
+	color: $baseColor;
+	text-transform: uppercase;
+	span{
+		color:#ffc000;
+	}
 }
 .subheading,.ctext h2,h2{
 	@extend %heading;

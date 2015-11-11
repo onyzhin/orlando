@@ -1,22 +1,35 @@
 /*buttons*/
 .button {
 	min-width: 100px;
-	padding: 0 4px;
+	max-width: 282px;
+	padding: 0 15px;
 	display: inline-block;
 	vertical-align: top;
 	cursor: pointer;
 	position: relative;
 	text-decoration: none;
-	height: 28px;
-	line-height: 28px;
-	color: #fff !important;
-	font-size: 12px;
+	height: 53px;
+	line-height: 53px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff !important;	
+	font-size: 18px;
 	text-align: center;
+  	text-shadow: 01.5px 1.866px 0px rgba(206, 155, 0, 0.4);
 	background: #6d9aea;
-	border: 0px solid #c10e0e;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(255, 180, 0);
+	border-radius: 26px;
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 226, 139, 0.4);  
+	@include vertical-gradient(#ffc000,#ff9700);
 
+	&.block{
+		display: block;
+		margin: 0 auto;
+	}
 	&:hover{
-		background: #6d0aea;
+		background: #ff9700;
 	}
 	input {
 		width: 100%;

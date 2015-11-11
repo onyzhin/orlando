@@ -14,7 +14,35 @@
 	jQuery.validator.addMethod("phoneRU", function(value, element) {
 		return this.optional(element) || /^([0-9]){10}$/.test(value);
 	}, "10-ти значный номер без пробелов");
-	
+
+	jQuery.validator.addMethod("requiredPhone", function(value, element, param) {
+		value = value.replace('+7 (___) ___-__-__');
+		
+		if ( !this.depend( param, element ) ) {
+			return "dependency-mismatch";
+		}
+		if ( element.nodeName.toLowerCase() === "select" ) {
+			var val = $( element ).val();
+			return val && val.length > 0;
+		}
+		if ( this.checkable( element ) ) {
+			return this.getLength( value, element ) > 0;
+		}
+		return $.trim( value ).length > 0;
+	}, "Укажите ваш телефон");
+
+	jQuery.validator.addMethod("minlengthPhone", function(value, element, param) {
+		value = value.replace('+7 (', '');
+		value = value.replace(') ', '');
+		value = value.replace(/ - /g, '');
+		value = value.replace(/_/g, '');
+		
+		var length = $.isArray( value ) ? value.length : this.getLength( $.trim( value ), element );
+		return this.optional( element ) || length >= param;
+	}, "Телефон должен быть не менее {0} символов");
+
+
+
 	$.fn.zValidate = function(settings){
 		var self=this;
 		$(self).each(function(){
@@ -39,7 +67,7 @@
 					$(this).rules( "add", {
 						required: true,
 						messages: {
-							required: "вы пропустили"
+							required: "Заполните поле"
 						}
 					});
 				})
@@ -62,10 +90,20 @@
 					$(this).rules( "add", {
 						 phoneRU: true,
 						 messages: {
-							phoneRU: "А япона мать"
+							phoneRU: ""
 						}
 					});
 				})
+				$('[phone]',$form).each(function(){
+					$(this).rules( "add", {
+					 	requiredPhone: true,
+						minlengthPhone: 12,
+						 messages: {
+							minlengthPhone: "Телефон должен быть не менее 10 символов"
+						}
+					});
+				})
+
 				$('[code]',$form).each(function(){
 					$(this).rules( "add", {
 						required: true,

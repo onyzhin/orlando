@@ -1,0 +1,46 @@
+.gate{
+	min-height: 490px;
+	background: url(../images/pattern-6.png) center center no-repeat;
+	background-size: cover;
+
+	&-info{
+		width: pxtopercent(362px, 960px);
+		float: left;
+		padding-top: 80px;
+
+		&-title{
+			font-size: 26px;
+			line-height: 31px;
+			text-transform: uppercase;
+			font-family: "Arial Black";
+			margin-bottom: 27px;
+
+			em{
+				color: #c50404;
+			}
+		}
+		&-hour{
+			position: relative; 
+			margin-bottom: 44px;
+			
+			&-inner{
+				
+			}
+			&:after{
+				content: url(../images/hour-arrow.png);
+				float: left;
+				position: relative;
+				top: 11px;
+				margin-right: 21px;
+			}
+		}
+		.button{
+			width: 232px;
+		}
+	}
+	&-image{
+		width: pxtopercent(578px, 960px);
+		float: left;
+	    padding-top: 49px;
+	}
+}
