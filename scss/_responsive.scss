@@ -142,9 +142,13 @@
 	    margin-bottom:25px;
 	}
 	.portfolio-gallery,
-	.portfolio-info{
+	.portfolio-info,
+	.projects .portfolio-info{
 		width: 100%;
 		float: none;
+	}
+	.portfolio-info-main{
+		min-height: auto;
 	}
 	.portfolio-description-title{
 	    padding-left: calc(10% + 5px);
@@ -253,6 +257,14 @@
 			margin-top: 0;
 			width: 100%;
 		}
+	}
+	.projects .portfolio-gallery{
+		width: 100%;
+	}
+	.portfolio-gallery .slider-for{
+		max-width: 350px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
  

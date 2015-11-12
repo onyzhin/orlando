@@ -1,3 +1,62 @@
 .projects{
-	
+
+	&.portfolio{
+	}
+	.portfolio-item:nth-child(1){
+		min-height: 610px;
+	}
+	.portfolio-item:nth-child(2){
+		min-height: 493px;
+	}
+	.portfolio-item:nth-child(3){
+		min-height: 493px;
+	}
+	.portfolio-gallery{
+		width: pxtopercent(350px);
+	}
+	.portfolio-info{
+		width: pxtopercent(590px); 
+	}
+	&-slider{
+
+		.slider-for{
+			margin-bottom: 14px;
+		}
+		.slider-nav{
+			margin-bottom: 14px;
+			padding: 0 11px;
+
+			.slick-prev, .slick-next{
+			    background-image: url(../images/slider-arrows-small.png);
+			    height: 20px;
+			    width: 11px;
+			    margin-top: -10px;
+			}
+		}
+		.slick-slide {
+			.image-zoom{
+				display: block;
+				background: rgba(255,255,255,0.6);
+				width: 40px;
+				height: 40px;
+				position: absolute;
+			    bottom: 6px;
+    			right: 6px;
+    			@include transition(300, all, ease);
+    			.icon{
+    				@extend %full-block;
+    				left: 4px;
+    			}
+			}
+			&:hover{
+				.image-zoom{
+					background: rgba(255,255,255,0.8);
+				}
+			}
+			img{
+				border: 6px solid #b7b7b7;
+				margin: 0 auto;
+			}
+		}
+	}
 }

@@ -64,6 +64,42 @@ function slickInit(){
 	    },
 	  ]
 	});
+
+	$('.projects-slider').each(function(){
+		$slider=$(this);
+		$('.slider-for',$slider).slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  fade: true,
+		  asNavFor: $('.slider-nav', $slider)
+		});
+		$('.slider-nav',$slider).slick({
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  asNavFor: $('.slider-for', $slider),
+		  dots: false,
+		  centerMode: true,
+		  centerPadding:'0px',
+		  focusOnSelect: true,
+		  responsive: [
+		  	{
+		      breakpoint: 768,
+		      settings: {
+		        slidesToShow: 4,
+		        slidesToScroll: 1
+		      }
+		    },
+		  	{
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 1
+		      }
+		    },
+		  ]
+		});
+	})
 }
 
 function galleryLink(){

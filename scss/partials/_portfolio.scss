@@ -56,7 +56,7 @@
 		margin-bottom: 49px;
 	}
 	&-gallery{
-		width: pxtopercent(400px,960px); 
+		width: pxtopercent(400px); 
 		float: left;
 		@extend %col;
 
@@ -97,7 +97,7 @@
 		}
 	}
 	&-info{
-		width: pxtopercent(560px,960px); 
+		width: pxtopercent(560px); 
 		@extend %col;
 
 		&-title{    
@@ -118,6 +118,10 @@
    			&:last-child{
    				margin-bottom: 0;
    			}
+		}
+		&-main{
+			min-height: 200px;
+			margin-bottom: 53px;
 		}
 	}
 	&-description{
